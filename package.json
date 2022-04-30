@@ -1,8 +1,8 @@
 {
   "name": "portfolio-v2",
   "version": "0.0.1",
-  "description": "Leodev portfolio v2",
-  "productName": "Segunda versão do portfolio",
+  "description": "Segunda versão do portfolio do Leo developer",
+  "productName": "Portfólio v2 - LeoDev",
   "author": "Leonardo <leonard296@live.com>",
   "private": true,
   "scripts": {

@@ -15,13 +15,13 @@
         <nav style="display: flex">
           <ul class="q-col-gutter-md q-mt-xs" style="display: flex; list-style: none">
             <li v-for="page in pages" :key="page.id">
-              <a target="_blank" :href="page.route" style="text-decoration: none; color: white">{{ page.name }}</a>
+              <a :href="page.route" style="text-decoration: none; color: white">{{ page.name }}</a>
             </li>
           </ul>
           <q-space />
           <ul class="q-col-gutter-md q-mt-xs q-mr-lg" style="display: flex; list-style: none; color: white">
             <li v-for="social in socials" :key="social.id">
-              <q-btn :icon="social.icon" :href="social.url" target="_blank" />
+              <q-btn flat :icon="social.icon" :href="social.url" target="_blank" style="border: none" />
             </li>
           </ul>
         </nav>
@@ -41,17 +41,17 @@ export default {
   data () {
     return {
       pages: [
-        { name: 'home', route: 'home' },
-        { name: 'about me', route: 'about-me' },
-        { name: 'blog', route: 'blog' },
-        { name: 'portfolio', route: 'portfolio' }
+        { name: 'home', route: '/' },
+        { name: 'projects', route: 'projects' },
+        { name: 'about', route: 'about' }
       ],
 
       socials: [
-        { icon: 'currency_bitcoin', url: 'https://github.com/leodev7/' },
-        { icon: 'link', url: 'https://www.linkedin.com/in/leonardodev7/' },
+        { icon: 'fa-brands fa-github', url: 'https://github.com/leodev7/' },
+        { icon: 'fa-brands fa-linkedin', url: 'https://www.linkedin.com/in/leonardodev7/' },
         { icon: 'telegram', url: 'https://t.me/Leop7' },
-        { icon: 'photo_camera', url: 'https://instagram.com/leonardodev7' }
+        { icon: 'fa-brands fa-instagram-square', url: 'https://instagram.com/leonardodev7' },
+        { icon: 'fa-solid fa-envelope', url: 'mailto:leop.contato@gmail.com' }
       ]
     }
   }
