@@ -14,7 +14,7 @@
       </div>
 
       <div class="col-sm-12 col-md-10">
-        <nav style="display: flex; flex-wrap: wrap">
+        <nav style="display: flex; flex-wrap: wrap; justify-content: center;">
           <ul class="q-mt-md" style="display: flex; list-style: none">
             <li v-for="page in pages" :key="page.id">
               <q-btn flat :to="page.route" style="text-decoration: none; color: white">{{ page.name }}</q-btn>
