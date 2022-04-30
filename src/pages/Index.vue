@@ -1,18 +1,23 @@
 <template>
-  <div style="padding-left: 37px">
+  <div style="padding: 0 2rem 2rem">
     <h1>Olá, eu sou o leonardo!</h1>
     <p style="font-size: 20px" class="text-white">O céu não é o limite! 🚀</p>
-    <a class="link-arrow" href="">
+    <q-btn class="link-arrow text-capitalize" :to="route">
       <span>Projetos</span>	
       <img src="/img/ArrowRight.svg" alt="">
-    </a>
+    </q-btn>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'IndexPage',
+  name: 'Index',
+  data () {
+    return {
+      route: 'projects'
+    }
+  }
 }
 </script>
 
@@ -36,6 +41,7 @@ export default {
 .link-arrow img
   position: absolute
   right: -3.5rem
+  top: 0.6rem
   transition: all 0.2s ease
 
 .link-arrow:hover img

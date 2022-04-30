@@ -1,9 +1,7 @@
 <template>
-  <q-page>
-    <div style="padding-left: 37px">
-      <h1>Hello world: projects</h1>
-    </div>
-  </q-page>
+  <div style="padding: 0 2rem 2rem">
+    <h1>Hello world: projects</h1>
+  </div>
 </template>
 
 <script>
