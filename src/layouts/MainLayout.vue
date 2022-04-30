@@ -4,7 +4,7 @@
 
       <div class="col-2">
         <div class="leftNavBar">
-          <div>
+          <div class="q-ma-md">
             <q-img src="https://leodev7.github.io/portfolio/img/leo-logo.png" width="10rem" />
           </div>
           <div>
@@ -17,7 +17,7 @@
         <nav style="display: flex">
           <ul class="q-gutter-md q-mt-xs" style="display: flex; list-style: none">
             <li v-for="page in pages" :key="page.id">
-              <a :href="page.route" style="text-decoration: none; color: white">{{ page.name }}</a>
+              <q-btn flat :to="page.route" style="text-decoration: none; color: white">{{ page.name }}</q-btn>
             </li>
           </ul>
           <q-space />
