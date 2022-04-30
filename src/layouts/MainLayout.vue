@@ -15,13 +15,13 @@
 
       <div class="col-sm-12 col-md-10">
         <nav style="display: flex; flex-wrap: wrap; justify-content: center;">
-          <ul class="q-mt-md" style="display: flex; list-style: none">
+          <ul class="q-mt-md" style="display: flex; list-style: none; padding-inline-start: 0">
             <li v-for="page in pages" :key="page.id">
               <q-btn flat :to="page.route" style="text-decoration: none; color: white">{{ page.name }}</q-btn>
             </li>
           </ul>
           <q-space />
-          <ul class="q-mt-md oi" style="display: flex; list-style: none; color: white">
+          <ul class="q-mt-md oi" style="display: flex; list-style: none; color: white; padding-inline-start: 0">
             <li v-for="social in socials" :key="social.id">
               <q-btn flat rounded :icon="social.icon" :href="social.url" target="_blank" style="border: none" />
             </li>
