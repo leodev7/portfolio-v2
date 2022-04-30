@@ -8,7 +8,7 @@
             <q-img src="https://leodev7.github.io/portfolio/img/leo-logo.png" width="10rem" />
           </div>
           <div>
-            <q-btn class="text-white transformMail" dense flat rounded icon="fa-solid fa-envelope" href="mailto:leop.contato@gmail.com" target="_blank" />
+            <q-btn class="text-white transformMail" dense flat rounded color="red" icon="fa-solid fa-envelope" href="mailto:leop.contato@gmail.com" target="_blank" />
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@
             </li>
           </ul>
           <q-space />
-          <ul class="q-mt-md oi" style="display: flex; list-style: none; color: white; padding-inline-start: 0">
+          <ul class="q-mt-md mail" style="display: flex; list-style: none; color: #F04848; padding-inline-start: 0">
             <li v-for="social in socials" :key="social.id">
               <q-btn flat rounded :icon="social.icon" :href="social.url" target="_blank" style="border: none" />
             </li>
@@ -62,12 +62,12 @@ export default {
 </script>
 
 <style lang="sass">
-ul.oi li:last-child
+ul.mail li:last-child
   display: none
 
 @media (max-width: 1024px)
-  ul.oi li:last-child
-    // display: initial
+  ul.mail li:last-child
+    display: initial
 
   .leftNavBar
     display: none
