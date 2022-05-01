@@ -19,7 +19,7 @@ export default {
   name: 'Index',
   data () {
     return {
-      route: 'projects'
+      route: 'r_projects'
     }
   }
 }
