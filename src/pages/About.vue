@@ -2,7 +2,7 @@
   <div style="padding: 0 2rem 2rem">
     <div class="row">
       <div class="col-xs-12 col-sm-4 text-center">
-        <q-img src="https://avatars.githubusercontent.com/u/65429868?v=4" width="10rem" style="margin-top: 5rem; border-radius: 50%" />
+        <q-img src="img/user_photo.jpeg" class="userImage" />
       </div>
 
       <div class="col-xs-12 col-sm-8">
@@ -28,6 +28,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass">
+.userImage
+  width: 15rem
+  margin-top: 5rem
+  border-radius: 50%
+
+@media (min-width: 600px) and (max-width: 800px)
+  .userImage
+    width: 10rem
 
 </style>
