@@ -17,13 +17,30 @@ body
   border-radius: 31px
   padding: 50px
 
-.container
-  width: 70%
-  max-width: 1100px
-  height: 80%
-  margin: 0 auto
+.link-arrow
+  font-size: 1.1rem
+  font-weight: lighter
+  border: 1px solid #b1b1b1
+  border-radius: 10px
+  padding: 1.3rem 3.4rem
+  width: fit-content
+  color: white
+  text-decoration: none
   display: flex
-  flex-direction: column
+  align-items: center
+  position: relative
+
+.link-arrow span
+  display: inline-block
+
+.link-arrow img
+  position: absolute
+  right: -3.5rem
+  top: 0.6rem
+  transition: all 0.2s ease
+
+.link-arrow:hover img
+  right: -4.2rem
 
 h1
   background: linear-gradient(267deg, #6F23D8 0%, #A2359B 0%, #E54C4C 31%, #36A9DD 55%, #BEDD3D 71%, #EF49A2 85%, #808080 100%)

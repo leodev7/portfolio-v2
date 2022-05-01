@@ -45,8 +45,8 @@ export default {
     return {
       pages: [
         { name: 'início', route: '/' },
-        { name: 'projetos', route: 'projects' },
-        { name: 'sobre', route: 'about' }
+        { name: 'sobre', route: 'about' },
+        { name: 'projetos', route: 'projects' }
       ],
 
       socials: [
