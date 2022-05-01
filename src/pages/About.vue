@@ -22,7 +22,7 @@ export default {
   name: 'About',
   data () {
     return {
-      route: 'r_projects'
+      route: 'projects'
     }
   }
 }
