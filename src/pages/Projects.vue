@@ -3,22 +3,24 @@
     <q-table class="no-shadow" style="background: transparent" hide-pagination row-key="id" :rows="projectsData" :columns="projectsColumns" :rows-per-page-options="[0]">
 
       <template v-slot:body="props">
-        <q-tr class="row q-mb-xl q-pa-lg" :props="props" style="flex-direction: reverse">
-          <div class="row full-width" :style="props.rowIndex % 2 === 0 ? 'flex-direction: row' : 'flex-direction: row-reverse'">
-            <div class="col-sm-6 col-xs-12" :class="props.rowIndex % 2 === 0 ? '' : 'text-right'">
-              <q-img class="rounded-borders image" :src="props.row.imageUrl" :ratio="1" />
-            </div>
+        <transition appear class="animated jackInTheBox" style="--animate-duration: 2s;">
+          <q-tr class="row q-mb-xl q-pa-lg" :props="props" style="flex-direction: reverse">
+            <div class="row full-width" :style="props.rowIndex % 2 === 0 ? 'flex-direction: row' : 'flex-direction: row-reverse'">
+              <div class="col-sm-6 col-xs-12" :class="props.rowIndex % 2 === 0 ? '' : 'text-right'">
+                <q-img class="rounded-borders image" :src="props.row.imageUrl" :ratio="1" />
+              </div>
 
-            <div class="col-sm-6 col-xs-12">
-              <p class="titleText">{{ props.row.title }}</p>
-              <p class="sumaryText">{{ props.row.summary }}</p>
-              <div class="text-right q-gutter-sm">
-                <q-btn color="red" label="Ver demo" :href="props.row.demoUrl" target="_blank" />
-                <q-btn color="red" label="Ver github" :href="props.row.githubUrl" target="_blank" />
+              <div class="col-sm-6 col-xs-12">
+                  <p class="titleText">{{ props.row.title }}</p>
+                <p class="sumaryText">{{ props.row.summary }}</p>
+                <div class="text-right q-gutter-sm">
+                  <q-btn color="red" label="Ver demo" :href="props.row.demoUrl" target="_blank" />
+                  <q-btn color="red" label="Ver github" :href="props.row.githubUrl" target="_blank" />
+                </div>
               </div>
             </div>
-          </div>
-        </q-tr>
+          </q-tr>
+        </transition>
       </template>
 
       <template v-slot:no-data>

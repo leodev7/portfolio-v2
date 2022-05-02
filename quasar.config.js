@@ -106,7 +106,8 @@ module.exports = configure(function (ctx) {
     // https://quasar.dev/options/animations
     animations: [
       'flash',
-      'headShake'
+      'headShake',
+      'jackInTheBox'
     ],
 
     // https://v2.quasar.dev/quasar-cli-webpack/developing-ssr/configuring-ssr
