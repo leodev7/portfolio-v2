@@ -5,11 +5,9 @@
       <template v-slot:body="props">
         <q-tr class="row q-mb-xl q-pa-lg" :props="props" style="flex-direction: reverse">
           <div class="row full-width" :style="props.rowIndex % 2 === 0 ? 'flex-direction: row' : 'flex-direction: row-reverse'">
-            <div class="col-sm-5 col-xs-12">
+            <div class="col-sm-6 col-xs-12" :class="props.rowIndex % 2 === 0 ? '' : 'text-right'">
               <q-img class="rounded-borders image" :src="props.row.imageUrl" :ratio="1" />
             </div>
-
-            <q-space />
 
             <div class="col-sm-6 col-xs-12">
               <p class="titleText">{{ props.row.title }}</p>
