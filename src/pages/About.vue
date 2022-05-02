@@ -10,7 +10,9 @@
 
         <q-btn class="link-arrow text-capitalize" :to="route">
           <span>Projetos</span>	
-          <img src="/img/ArrowRight.svg" alt="">
+          <transition appear class="animated headShake infinite delay-2s" style="--animate-duration: 3s;">
+            <img src="/img/ArrowRight.svg" alt="">
+          </transition>
         </q-btn>
       </div>
     </div>
