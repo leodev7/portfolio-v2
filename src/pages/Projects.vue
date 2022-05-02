@@ -67,6 +67,7 @@ table tbody
 
 .image
   width: 30vw
+  max-width: 430px
 
 .titleText
   font-size: 2rem
