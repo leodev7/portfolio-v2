@@ -4,7 +4,7 @@
 
       <template v-slot:body="props">
         <q-tr class="row q-mb-xl q-pa-lg" :props="props" style="flex-direction: reverse">
-          <div class="row" :style="props.rowIndex % 2 === 0 ? 'flex-direction: row' : 'flex-direction: row-reverse'">
+          <div class="row full-width" :style="props.rowIndex % 2 === 0 ? 'flex-direction: row' : 'flex-direction: row-reverse'">
             <div class="col-sm-5 col-xs-12">
               <q-img class="rounded-borders image" :src="props.row.imageUrl" :ratio="1" />
             </div>
@@ -59,15 +59,15 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-table tbody
+<style lang="sass">
+.q-table tbody
   display: flex
   flex-wrap: wrap
   flex-direction: column-reverse
 
 .image
   width: 30vw
-  max-width: 430px
+  max-width: 400px
 
 .titleText
   font-size: 2rem
@@ -93,4 +93,5 @@ table tbody
 
   .image
     width: 65vw
+    margin-bottom: 1rem
 </style>
