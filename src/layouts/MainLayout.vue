@@ -17,7 +17,10 @@
         <nav style="display: flex; flex-wrap: wrap; justify-content: center;">
           <ul class="q-mt-md" style="display: flex; list-style: none; padding-inline-start: 0">
             <li v-for="page in pages" :key="page.id">
-              <q-btn flat :to="page.route" style="text-decoration: none; color: white">{{ page.name }}</q-btn>
+              <q-btn flat :to="page.route" style="color: white">{{ page.name }}</q-btn>
+            </li>
+            <li>
+              <q-btn flat href="curriculo.pdf" target="_blank" style="color: white">Curriculo</q-btn>
             </li>
           </ul>
           <q-space />
