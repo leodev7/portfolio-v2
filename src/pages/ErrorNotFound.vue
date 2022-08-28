@@ -6,7 +6,7 @@
       </div>
 
       <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
+        Página não encontrada
       </div>
 
       <q-btn
@@ -15,7 +15,7 @@
         text-color="blue"
         unelevated
         to="/"
-        label="Go Home"
+        label="Voltar"
         no-caps
       />
     </div>
@@ -23,9 +23,13 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
 
-export default defineComponent({
-  name: 'ErrorNotFound'
-})
+export default {
+  name: 'ErrorNotFound',
+  mounted () {
+    setTimeout(() => {
+      window.location.href = "https://leodev7.netlify.app/#/";
+    }, 3000)
+  }
+}
 </script>

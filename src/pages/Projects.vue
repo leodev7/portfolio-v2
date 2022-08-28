@@ -4,7 +4,7 @@
 
       <template v-slot:body="props">
         <transition appear class="animated jackInTheBox" style="--animate-duration: 2s;">
-          <q-tr class="row q-mb-xl q-pa-lg" :props="props" style="flex-direction: reverse">
+          <q-tr class="row q-mb-xl q-pa-lg" :props="props" style="flex-direction: row-reverse">
             <div class="row full-width" :style="props.rowIndex % 2 === 0 ? 'flex-direction: row' : 'flex-direction: row-reverse'">
               <div class="col-sm-6 col-xs-12" :class="props.rowIndex % 2 === 0 ? '' : 'text-right'">
                 <q-img class="rounded-borders image" :src="props.row.imageUrl" :ratio="1" />
@@ -46,15 +46,70 @@ export default {
     return {
       projectsColumns:[],
       projectsData: [
-        { "id": 0, "imageUrl": "img/projects/site-techno.png", "title": "Techno", "summary": "Site criado a partir do projeto da Origamid, usando a biblioteca Vue.", "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/vue/", "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/vue" },
-        { "id": 1, "imageUrl": "img/projects/site-proffy.png", "title": "Proffy", "summary": "Site criado a partir da NLW #2 da Rocketseat, usando a biblioteca React.", "demoUrl": "https://nlw2-sandy.vercel.app/", "githubUrl": "https://github.com/leodev7/nlw2" },
-        { "id": 2, "imageUrl": "img/projects/site-animais-fantasticos.png", "title": "Animais fantásticos", "summary": "Site criado a partir do projeto da Origamid. Um curso incrível para quem é/deseja ser desenvolvedor.", "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/animais-fantasticos/index.html", "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/animais-fantasticos" },
-        { "id": 3, "imageUrl": "img/projects/site-mozaostore.png", "title": "Mozão Store", "summary": "Site criado para trabalho de faculdade, utilizando framework Materialize.", "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/mozaostore/index.html", "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/mozaostore" },
-        { "id": 4, "imageUrl": "img/projects/site-soart.png", "title": "So Art", "summary": "Primeiro projeto criado completamente sozinho, com o intuito apenas de aprendizado.", "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/soart/index.html", "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/soart" },
-        { "id": 5, "imageUrl": "img/projects/site-ecoleta.png", "title": "Ecoleta", "summary": "Site criado a partir do projeto da Rocketseat. Uma semana incrível de desenvolvimento profissional e pessoal.", "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/nlw/index.html", "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/nlw" },
-        { "id": 6, "imageUrl": "img/projects/site-helpmilhas.png", "title": "Help milhas", "summary": "Site criado a partir do aplicativo da help milhas feito por Joabson Programadorzao. Um facilitador na hora de realizar compras inteligentes.", "demoUrl": "https://helpmilhas.netlify.app/#/", "githubUrl": "https://github.com/leodev7/help-milhas" },
-        { "id": 7, "imageUrl": "img/projects/site-crypto.png", "title": "Crypto price", "summary": "Ver os valores de algumas criptomoedas, assim como o histórico das mesmas.", "demoUrl": "https://dacxi.netlify.app/#/", "githubUrl": "https://github.com/leodev7/dacxi-test" },
-        { "id": 8, "imageUrl": "img/projects/site-spaceflight.png", "title": "Space flight", "summary": "Projeto utilizando API pública com informações relacionadas a voos espaciais.", "demoUrl": "https://space-flight.netlify.app/", "githubUrl": "https://github.com/leodev7/space-flight" }
+        {
+          "id": 0,
+          "imageUrl": "img/projects/site-techno.png",
+          "title": "Techno",
+          "summary": "Site criado a partir do projeto da Origamid, usando a biblioteca Vue.",
+          "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/vue/",
+          "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/vue"
+        },
+        {
+          "id": 1,
+          "imageUrl": "img/projects/site-proffy.png",
+          "title": "Proffy",
+          "summary": "Site criado a partir da NLW #2 da Rocketseat, usando a biblioteca React.",
+          "demoUrl": "https://nlw2-sandy.vercel.app/",
+          "githubUrl": "https://github.com/leodev7/nlw2"
+        },
+        {
+          "id": 2,
+          "imageUrl": "img/projects/site-animais-fantasticos.png",
+          "title": "Animais fantásticos",
+          "summary": "Site criado a partir do projeto da Origamid. Um curso incrível para quem é/deseja ser desenvolvedor.",
+          "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/animais-fantasticos/index.html",
+          "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/animais-fantasticos"
+        },
+        {
+          "id": 3,
+          "imageUrl": "img/projects/site-mozaostore.png",
+          "title": "Mozão Store",
+          "summary": "Site criado para trabalho de faculdade, utilizando framework Materialize.",
+          "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/mozaostore/index.html",
+          "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/mozaostore"
+        },
+        {
+          "id": 4,
+          "imageUrl": "img/projects/site-soart.png",
+          "title": "So Art",
+          "summary": "Primeiro projeto criado completamente sozinho, com o intuito apenas de aprendizado.",
+          "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/soart/index.html",
+          "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/soart"
+        },
+        {
+          "id": 5,
+          "imageUrl": "img/projects/site-ecoleta.png",
+          "title": "Ecoleta",
+          "summary": "Site criado a partir do projeto da Rocketseat. Uma semana incrível de desenvolvimento profissional e pessoal.",
+          "demoUrl": "https://leodev7.github.io/portfolio/projetos-criados/nlw/index.html",
+          "githubUrl": "https://github.com/leodev7/portfolio/tree/master/projetos-criados/nlw"
+        },
+        {
+          "id": 6,
+          "imageUrl": "img/projects/site-crypto.png",
+          "title": "Crypto price",
+          "summary": "Ver os valores de algumas criptomoedas, assim como o histórico das mesmas.",
+          "demoUrl": "https://dacxi.netlify.app/#/",
+          "githubUrl": "https://github.com/leodev7/dacxi-test"
+        },
+        {
+          "id": 7,
+          "imageUrl": "img/projects/site-spaceflight.png",
+          "title": "Space flight",
+          "summary": "Projeto utilizando API pública com informações relacionadas a voos espaciais.",
+          "demoUrl": "https://space-flight.netlify.app/",
+          "githubUrl": "https://github.com/leodev7/space-flight"
+        }
       ]
     }
   }
@@ -88,6 +143,10 @@ export default {
 .sumaryText
   font-size: 1.1rem
   color: white
+
+@media (max-width: 611px)
+  .q-space
+    flex-grow: 0 !important
 
 @media (max-width: 599px)
   .q-tr.row
