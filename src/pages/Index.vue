@@ -4,6 +4,7 @@
 
     <transition appear class="animated flash" style="--animate-duration: 2s">
       <p style="font-size: 20px" class="text-white">O céu não é o limite! 🚀</p>
+      <p>Netlify</p>
     </transition>
 
     <q-btn class="link-arrow text-capitalize" :to="route">
