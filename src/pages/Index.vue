@@ -4,11 +4,10 @@
 
     <transition appear class="animated flash" style="--animate-duration: 2s">
       <p style="font-size: 20px" class="text-white">O céu não é o limite! 🚀</p>
-      <p>Netlify</p>
     </transition>
 
     <q-btn class="link-arrow text-capitalize" :to="route">
-      <span>Sobre</span>	
+      <span>Sobre</span>
         <transition appear class="animated headShake infinite" style="--animate-duration: 3s;">
           <img src="/img/ArrowRight.svg" alt="">
         </transition>
